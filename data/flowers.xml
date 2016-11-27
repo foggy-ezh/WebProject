@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.epam.com/flowers"
+        xsi:schemaLocation="http://www.epam.com/flowers flowers.xsd">
+    <indoor-flower name="Cactus">
+        <origin>America</origin>
+        <soil>dirt</soil>
+        <parameters>
+            <stem-color>green</stem-color>
+            <leaf-color>green</leaf-color>
+            <avg-size>35</avg-size>
+        </parameters>
+        <multiplying>seeds</multiplying>
+        <growing-tips>
+            <temperature>+15</temperature>
+            <required-lighting>sun</required-lighting>
+            <water-need>10</water-need>
+        </growing-tips>
+    </indoor-flower>
+    <outdoor-flower name="Begonia">
+        <origin>Africa</origin>
+        <soil>dirt</soil>
+        <parameters>
+            <stem-color>red</stem-color>
+            <leaf-color>green</leaf-color>
+            <avg-size>44</avg-size>
+        </parameters>
+        <multiplying>cuttings</multiplying>
+        <blooming-period>summer</blooming-period>
+    </outdoor-flower>
+</flowers>
