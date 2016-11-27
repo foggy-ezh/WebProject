@@ -15,7 +15,7 @@ public class CommandParse implements ICommandAction {
     private final String PARAM_PARSER_TYPE = "parserType";
     private final String PARAM_INDOOR_FLOWERS = "indoorFlowers";
     private final String PARAM_OUTDOOR_FLOWERS = "outdoorFlowers";
-    private final String FILE_NAME = "data/flowers.xml";
+    private final String FILE_NAME = "/home/artem/IdeaProjects/WebProject/data/flowers.xml";
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -39,6 +39,6 @@ public class CommandParse implements ICommandAction {
         request.setAttribute(PARAM_OUTDOOR_FLOWERS, outdoorFlowers);
         request.setAttribute(PARAM_PARSER_TYPE, type);
 
-        return "/result.jsp";
+        return "/jsp/result.jsp";
     }
 }

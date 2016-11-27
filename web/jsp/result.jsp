@@ -7,8 +7,6 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<fmt:setLocale value="${locale}"/>
-<fmt:setBundle basename="properties.text"/>
 <html>
 <head>
     <title>Result</title>
@@ -32,16 +30,16 @@
     </tr>
     <c:forEach var="indoorFlower" items="${indoorFlowers}">
         <tr>
-            <td><c:out value="${indoorFlowers.name}"/></td>
-            <td><c:out value="${indoorFlowers.origin}"/></td>
-            <td><c:out value="${indoorFlowers.soilType}"/></td>
-            <td><c:out value="${indoorFlowers.getParameters().stemColor}"/></td>
-            <td><c:out value="${indoorFlowers.getParameters().leafColor}"/></td>
-            <td><c:out value="${indoorFlowers.getParameters().avgSize}"/></td>
-            <td><c:out value="${indoorFlowers.multiplyingType}"/></td>
-            <td><c:out value="${indoorFlowers.getGrowingTips().temperature}"/></td>
-            <td><c:out value="${indoorFlowers.getGrowingTips().lightingType}"/></td>
-            <td><c:out value="${indoorFlowers.getGrowingTips().waterNeed}"/></td>
+            <td><c:out value="${indoorFlower.name}"/></td>
+            <td><c:out value="${indoorFlower.origin}"/></td>
+            <td><c:out value="${indoorFlower.soilType}"/></td>
+            <td><c:out value="${indoorFlower.parameters.stemColor}"/></td>
+            <td><c:out value="${indoorFlower.parameters.leafColor}"/></td>
+            <td><c:out value="${indoorFlower.parameters.avgSize}"/></td>
+            <td><c:out value="${indoorFlower.multiplyingType}"/></td>
+            <td><c:out value="${indoorFlower.growingTips.temperature}"/></td>
+            <td><c:out value="${indoorFlower.growingTips.lightingType}"/></td>
+            <td><c:out value="${indoorFlower.growingTips.waterNeed}"/></td>
         </tr>
     </c:forEach>
 </table>
@@ -60,17 +58,16 @@
     </tr>
     <<c:forEach var="outdoorFlower" items="${outdoorFlowers}">
         <tr>
-            <td><c:out value="${indoorFlowers.name}"/></td>
-            <td><c:out value="${indoorFlowers.origin}"/></td>
-            <td><c:out value="${indoorFlowers.soilType}"/></td>
-            <td><c:out value="${indoorFlowers.getParameters().stemColor}"/></td>
-            <td><c:out value="${indoorFlowers.getParameters().leafColor}"/></td>
-            <td><c:out value="${indoorFlowers.getParameters().avgSize}"/></td>
-            <td><c:out value="${indoorFlowers.multiplyingType}"/></td>
-            <td><c:out value="${indoorFlowers.bloomingPeriod}"/></td>
+            <td><c:out value="${outdoorFlower.name}"/></td>
+            <td><c:out value="${outdoorFlower.origin}"/></td>
+            <td><c:out value="${outdoorFlower.soilType}"/></td>
+            <td><c:out value="${outdoorFlower.parameters.stemColor}"/></td>
+            <td><c:out value="${outdoorFlower.parameters.leafColor}"/></td>
+            <td><c:out value="${outdoorFlower.parameters.avgSize}"/></td>
+            <td><c:out value="${outdoorFlower.multiplyingType}"/></td>
+            <td><c:out value="${outdoorFlower.bloomingPeriod}"/></td>
         </tr>
     </c:forEach>
 </table>
-<a href="/WebFirstTask"><fmt:message key="label.link.back"/></a>
 </body>
 </html>

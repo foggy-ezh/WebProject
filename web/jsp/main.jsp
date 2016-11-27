@@ -16,7 +16,7 @@
 <hr>
 <form name="XMLParser" action="FirstWebAction" method="post">
     <p>Choose type of xml parser:</p>
-    <select name="typeParser">
+    <select name="parserType">
         <option value="dom">DOM parser</option>
         <option value="sax">SAX parser</option>
         <option value="stax">StAX parser</option>

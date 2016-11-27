@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/FirstWebAction")
+@WebServlet("/jsp/FirstWebAction")
 public class FirstWebAction extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -31,7 +31,6 @@ public class FirstWebAction extends HttpServlet {
         ICommandAction command = client.getCurrentCommand(request);
 
         page = command.execute(request);
-        System.out.println(page);
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
         dispatcher.forward(request, response);
     }
