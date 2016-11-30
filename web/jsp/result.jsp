@@ -69,5 +69,9 @@
         </tr>
     </c:forEach>
 </table>
+<form name="Back" action="FirstWebAction" method="post">
+    <button type="submit"><-Back</button>
+    <input type="hidden" name="command" value="back"/>
+</form>
 </body>
 </html>

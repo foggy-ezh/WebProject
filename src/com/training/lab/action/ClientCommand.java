@@ -12,6 +12,7 @@ public class ClientCommand {
     private final String PARSE = "parse";
     private final String UPLOAD = "upload";
     private final String CHANGE_LANGUAGE = "change_language";
+    private final String BACK = "back";
 
     public ICommandAction getCurrentCommand(HttpServletRequest request){
         String action = request.getParameter(PARAM_COMMAND);
@@ -21,6 +22,8 @@ public class ClientCommand {
                 return new CommandUpload();
             case PARSE:
                 return new CommandParse();
+            case BACK:
+                return new CommandBack();
             case CHANGE_LANGUAGE:
 //                return new CommandChangeLanguage();
             default:

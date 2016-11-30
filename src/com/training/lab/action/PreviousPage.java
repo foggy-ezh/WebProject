@@ -9,7 +9,7 @@ public class PreviousPage {
 
     public static void setPreviousPage(HttpServletRequest request){
         String previousPage = request.getParameter(JSP_PATH);
-        if(!previousPage.isEmpty()){
+        if(previousPage != null){
             if (!init){
                 ArrayDeque<String> pagesHistory = new ArrayDeque<>();
                 pagesHistory.add(previousPage);
