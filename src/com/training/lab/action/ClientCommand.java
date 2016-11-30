@@ -11,7 +11,7 @@ public class ClientCommand {
     private final String PARAM_COMMAND = "command";
     private final String PARSE = "parse";
     private final String UPLOAD = "upload";
-    private final String CHANGE_LANGUAGE = "change_language";
+    private final String CHANGE_LANGUAGE = "changeLanguage";
     private final String BACK = "back";
 
     public ICommandAction getCurrentCommand(HttpServletRequest request){
