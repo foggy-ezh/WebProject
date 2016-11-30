@@ -22,7 +22,8 @@
         <option value="stax">StAX parser</option>
     </select>
     <button type="submit">Submit</button>
-    <input type="hidden" name="command" value="parse">
+    <input type="hidden" name="command" value="parse"/>
+    <input type="hidden" name="jspPath" value="${pageContext.request.servletPath}"/>
 </form>
 </body>
 </html>

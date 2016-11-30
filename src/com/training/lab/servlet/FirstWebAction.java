@@ -2,6 +2,7 @@ package com.training.lab.servlet;
 
 import com.training.lab.action.ClientCommand;
 import com.training.lab.action.ICommandAction;
+import com.training.lab.action.PreviousPage;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,7 +29,7 @@ public class FirstWebAction extends HttpServlet {
     private void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String page = null;
-        System.out.println(request.getParameter("jspPath"));
+        PreviousPage.setPreviousPage(request);
         ClientCommand client = new ClientCommand();
         ICommandAction command = client.getCurrentCommand(request);
 
