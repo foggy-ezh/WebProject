@@ -15,13 +15,13 @@ public class CommandParse implements ICommandAction {
     private final String PARAM_PARSER_TYPE = "parserType";
     private final String PARAM_INDOOR_FLOWERS = "indoorFlowers";
     private final String PARAM_OUTDOOR_FLOWERS = "outdoorFlowers";
-    private final String FILE_NAME = "/home/artem/IdeaProjects/WebProject/data/flowers.xml";
+    private final String FILE = "file";
 
     @Override
     public String execute(HttpServletRequest request) {
         String type = request.getParameter(PARAM_PARSER_TYPE);
         AbstractFlowersParser parser = FlowersParserFactory.valueOf(type.toUpperCase()).getParser();
-        parser.buildListFlowers(FILE_NAME);
+        parser.buildListFlowers(request.getSession(true).getAttribute(FILE).toString());
         List<Flower> flowers = parser.getFlowers();
         List<IndoorFlower> indoorFlowers = new ArrayList<>();
         List<OutdoorFlower> outdoorFlowers = new ArrayList<>();

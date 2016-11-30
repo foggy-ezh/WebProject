@@ -11,6 +11,6 @@
   <head>
   </head>
   <body>
-  <c:redirect url="jsp/main.jsp"></c:redirect>
+  <c:redirect url="jsp/uploadFile.jsp"/>
   </body>
 </html>

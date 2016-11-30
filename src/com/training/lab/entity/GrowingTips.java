@@ -6,6 +6,18 @@ public class GrowingTips {
     private LightingType lightingType;
     private double waterNeed;
 
+    public double getTemperature() {
+        return temperature;
+    }
+
+    public LightingType getLightingType() {
+        return lightingType;
+    }
+
+    public double getWaterNeed() {
+        return waterNeed;
+    }
+
     public void setTemperature(double temperature) {
         this.temperature = temperature;
     }

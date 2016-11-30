@@ -8,6 +8,24 @@ public abstract class Flower {
     private Parameters parameters;
     private MultiplyingType multiplying;
 
+    public String getName() {
+        return name;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public SoilType getSoil() {
+        return soil;
+    }
+
+    public MultiplyingType getMultiplying() {
+        return multiplying;
+    }
+
+
+
     public void setName(String name) {
         this.name = name;
     }

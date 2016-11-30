@@ -6,6 +6,18 @@ public class Parameters {
     private String leafColor;
     private double avgSize;
 
+    public String getLeafColor() {
+        return leafColor;
+    }
+
+    public double getAvgSize() {
+        return avgSize;
+    }
+
+    public String getStemColor() {
+        return stemColor;
+    }
+
     public void setStemColor(String stemColor) {
         this.stemColor = stemColor;
     }
