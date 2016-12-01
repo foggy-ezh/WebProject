@@ -7,26 +7,28 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<fmt:setLocale value="${locale}"/>
+<fmt:setBundle basename="properties.resultText"/>
 <html>
 <head>
-    <title>Result</title>
+    <title><fmt:message key="title.result"/></title>
 </head>
 <body>
-<h1>Parser was used:${parserType}</h1>
+<h1><fmt:message key="parser.used"/>${parserType}</h1>
 <hr/>
 <table border="1">
-    <caption>IndoorFlowers</caption>
+    <caption><fmt:message key="indoor.flowers"/></caption>
     <tr>
-        <th>Name</th>
-        <th>Origin</th>
-        <th>SoilType</th>
-        <th>StemColor</th>
-        <th>LeafColor</th>
-        <th>AvgSize</th>
-        <th>MultiplyingType</th>
-        <th>Temperature</th>
-        <th>LightingType</th>
-        <th>WaterNeed</th>
+        <th><fmt:message key="column.name"/></th>
+        <th><fmt:message key="column.origin"/></th>
+        <th><fmt:message key="column.soil"/></th>
+        <th><fmt:message key="column.stem.color"/></th>
+        <th><fmt:message key="column.leaf.color"/></th>
+        <th><fmt:message key="column.size"/></th>
+        <th><fmt:message key="column.multiplying"/></th>
+        <th><fmt:message key="column.temperature"/></th>
+        <th><fmt:message key="column.lightning"/></th>
+        <th><fmt:message key="column.water.need"/></th>
     </tr>
     <c:forEach var="indoorFlower" items="${indoorFlowers}" varStatus="status">
         <tr>
@@ -45,16 +47,16 @@
 </table>
 <hr/>
 <table border="1">
-    <caption>OutdoorFlowers</caption>
+    <caption><fmt:message key="outdoor.flowers"/></caption>
     <tr>
-        <th>Name</th>
-        <th>Origin</th>
-        <th>SoilType</th>
-        <th>StemColor</th>
-        <th>LeafColor</th>
-        <th>AvgSize</th>
-        <th>MultiplyingType</th>
-        <th>BloomingPeriodType</th>
+        <th><fmt:message key="column.name"/></th>
+        <th><fmt:message key="column.origin"/></th>
+        <th><fmt:message key="column.soil"/></th>
+        <th><fmt:message key="column.stem.color"/></th>
+        <th><fmt:message key="column.leaf.color"/></th>
+        <th><fmt:message key="column.size"/></th>
+        <th><fmt:message key="column.multiplying"/></th>
+        <th><fmt:message key="column.blooming"/></th>
     </tr>
     <<c:forEach var="outdoorFlower" items="${outdoorFlowers}">
         <tr>
@@ -70,8 +72,10 @@
     </c:forEach>
 </table>
 <form name="Back" action="FirstWebAction" method="post">
-    <button type="submit"><-Back</button>
+    <p></p><button type="submit"><fmt:message key="result.label.submit.back"/></button>
     <input type="hidden" name="command" value="back"/>
 </form>
+<hr>
+<%@include file="/jsp/language.jsp" %>
 </body>
 </html>

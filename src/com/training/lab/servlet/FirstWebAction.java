@@ -19,11 +19,7 @@ import java.io.IOException;
 public class FirstWebAction extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ConfigurationManager cf = new ConfigurationManager();
-        String s = cf.getProperty("path.page.uploadFile");
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(s);
-        dispatcher.forward(req, resp);
-//        processRequest(req, resp);
+        processRequest(req, resp);
     }
 
     @Override

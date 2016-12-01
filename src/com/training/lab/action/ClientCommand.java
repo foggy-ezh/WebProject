@@ -17,6 +17,7 @@ public class ClientCommand {
     public ICommandAction getCurrentCommand(HttpServletRequest request){
         String action = request.getParameter(PARAM_COMMAND);
         LOGGER.log(Level.INFO, "Action command =" + action);
+        if(action == null){return new CommandInit();}
         switch (action){
             case UPLOAD:
                 return new CommandUpload();
@@ -25,9 +26,9 @@ public class ClientCommand {
             case BACK:
                 return new CommandBack();
             case CHANGE_LANGUAGE:
-//                return new CommandChangeLanguage();
+                return new CommandChangeLanguage();
             default:
-                  return  null;
+                  return  new CommandInit();
         }
     }
 

@@ -5,6 +5,7 @@ import com.training.lab.builder.FlowersParserFactory;
 import com.training.lab.entity.Flower;
 import com.training.lab.entity.IndoorFlower;
 import com.training.lab.entity.OutdoorFlower;
+import com.training.lab.manager.ConfigurationManager;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -16,6 +17,7 @@ public class CommandParse implements ICommandAction {
     private final String PARAM_INDOOR_FLOWERS = "indoorFlowers";
     private final String PARAM_OUTDOOR_FLOWERS = "outdoorFlowers";
     private final String FILE = "file";
+    private static final String PATH_PAGE_RESULT = "path.page.result";
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -39,6 +41,7 @@ public class CommandParse implements ICommandAction {
         request.setAttribute(PARAM_OUTDOOR_FLOWERS, outdoorFlowers);
         request.setAttribute(PARAM_PARSER_TYPE, type);
 
-        return "/jsp/result.jsp";
+        ConfigurationManager config = new ConfigurationManager();
+        return config.getProperty(PATH_PAGE_RESULT);
     }
 }

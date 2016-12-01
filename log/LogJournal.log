@@ -1,5 +1,8 @@
-2016-11-30 21:48:54.651 [http-nio-8080-exec-7] INFO  com.training.lab.action.ClientCommand - Action command =upload
-2016-11-30 21:48:56.638 [http-nio-8080-exec-8] INFO  com.training.lab.action.ClientCommand - Action command =parse
-2016-11-30 21:48:59.601 [http-nio-8080-exec-9] INFO  com.training.lab.action.ClientCommand - Action command =back
-2016-11-30 21:49:01.722 [http-nio-8080-exec-10] INFO  com.training.lab.action.ClientCommand - Action command =back
-2016-11-30 21:49:04.764 [http-nio-8080-exec-1] INFO  com.training.lab.action.ClientCommand - Action command =upload
+2016-12-01 03:04:32.680 [http-nio-8080-exec-2] INFO  com.training.lab.action.ClientCommand - Action command =null
+2016-12-01 03:04:33.832 [http-nio-8080-exec-4] INFO  com.training.lab.action.ClientCommand - Action command =null
+2016-12-01 03:04:42.332 [http-nio-8080-exec-6] INFO  com.training.lab.action.ClientCommand - Action command =null
+2016-12-01 03:04:57.868 [http-nio-8080-exec-7] INFO  com.training.lab.action.ClientCommand - Action command =upload
+2016-12-01 03:05:12.456 [http-nio-8080-exec-8] INFO  com.training.lab.action.ClientCommand - Action command =changeLanguage
+2016-12-01 03:05:25.905 [http-nio-8080-exec-9] INFO  com.training.lab.action.ClientCommand - Action command =parse
+2016-12-01 03:05:35.567 [http-nio-8080-exec-10] INFO  com.training.lab.action.ClientCommand - Action command =back
+2016-12-01 03:05:46.759 [http-nio-8080-exec-1] INFO  com.training.lab.action.ClientCommand - Action command =back

@@ -1,5 +1,7 @@
 package com.training.lab.action;
 
+import com.training.lab.manager.ConfigurationManager;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
@@ -11,6 +13,7 @@ public class CommandUpload implements ICommandAction{
     private static final String FILE = "file";
     private static final String FILE_NAME = "filename";
     private static final String CONTENT_DISPOSITION = "content-disposition";
+    private static final String PATH_PAGE_MAIN = "path.page.main";
     @Override
     public String execute(HttpServletRequest request) throws IOException, ServletException {
         String appPath = request.getServletContext().getRealPath("");
@@ -30,7 +33,8 @@ public class CommandUpload implements ICommandAction{
         System.out.println(savePath + File.separator + fileName);
         part.write(fullName);
         request.getSession(true).setAttribute(FILE, fullName);
-        return "/jsp/main.jsp";
+        ConfigurationManager config = new ConfigurationManager();
+        return config.getProperty(PATH_PAGE_MAIN);
     }
     /**
      * Extracts file name from HTTP header content-disposition

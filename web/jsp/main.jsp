@@ -7,27 +7,31 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="${locale}"/>
+<fmt:setBundle basename="properties.mainText"/>
 <html>
 <head>
-    <title>XML Parser</title>
+    <title><fmt:message key="title.main"/></title>
 </head>
 <body>
-<h1>Main Page</h1>
+<h1><fmt:message key="label.header"/></h1>
 <hr>
 <form name="XMLParser" action="FirstWebAction" method="post">
-    <p>Choose type of xml parser:</p>
+    <p><fmt:message key="label.select.parser"/></p>
     <select name="parserType">
-        <option value="dom">DOM parser</option>
-        <option value="sax">SAX parser</option>
-        <option value="stax">StAX parser</option>
+        <option value="dom"><fmt:message key="label.dom"/></option>
+        <option value="sax"><fmt:message key="label.sax"/></option>
+        <option value="stax"><fmt:message key="label.stax"/></option>
     </select>
-    <button type="submit">Submit</button>
+    <button type="submit"><fmt:message key="label.submit"/></button>
     <input type="hidden" name="command" value="parse"/>
     <input type="hidden" name="jspPath" value="${pageContext.request.servletPath}"/>
 </form>
 <form name="Back" action="FirstWebAction" method="post">
-    <button type="submit"><-Back</button>
+    <button type="submit"><fmt:message key="label.submit.back"/></button>
     <input type="hidden" name="command" value="back"/>
 </form>
+<hr>
+<%@include file="/jsp/language.jsp" %>
 </body>
 </html>
