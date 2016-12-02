@@ -32,7 +32,9 @@ public class CommandUpload implements ICommandAction{
         String fullName = savePath + File.separator + fileName;
         System.out.println(savePath + File.separator + fileName);
         part.write(fullName);
-        request.getSession(true).setAttribute(FILE, fullName);
+        request.getSession().setAttribute(FILE, fullName);
+        System.out.println(request.getSession().getAttribute("locale"));
+        System.out.println(request.getSession().getAttribute("language"));
         ConfigurationManager config = new ConfigurationManager();
         return config.getProperty(PATH_PAGE_MAIN);
     }
